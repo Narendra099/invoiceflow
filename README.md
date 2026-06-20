@@ -4,7 +4,17 @@ A full-stack invoicing app: create clients, build invoices with line items and t
 
 > Portfolio project demonstrating end-to-end full-stack development: typed REST API, relational data with transactions, a polished responsive UI, and a print/PDF-ready invoice document.
 
-![status](https://img.shields.io/badge/stack-React%20%2B%20Node%20%2B%20TypeScript-5b8cff)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-invoiceflow-5b8cff?style=for-the-badge&logo=render&logoColor=white)](https://invoiceflow-vbdk.onrender.com/)
+&nbsp;
+![stack](https://img.shields.io/badge/stack-React%20%2B%20Node%20%2B%20TypeScript-5b8cff)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-18-61dafb?logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-22-339933?logo=node.js&logoColor=white)
+
+**▶️ Live demo:** https://invoiceflow-vbdk.onrender.com/
+<sub>(hosted on Render's free tier — the first load may take ~30s while the service wakes up)</sub>
+
+![InvoiceFlow dashboard](docs/dashboard.png)
 
 ## Features
 
