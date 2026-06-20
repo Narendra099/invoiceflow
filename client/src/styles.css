@@ -1,0 +1,386 @@
+:root {
+  --bg: #0f1420;
+  --panel: #181f2e;
+  --panel-2: #1f2838;
+  --border: #2a3346;
+  --text: #e6ebf5;
+  --muted: #8b97ad;
+  --primary: #5b8cff;
+  --primary-d: #3f6fe0;
+  --green: #34d399;
+  --amber: #fbbf24;
+  --danger: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.brand,
+.brand-block {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+}
+.brand span,
+.brand-block span {
+  color: var(--primary);
+}
+.topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.topbar nav a {
+  color: var(--muted);
+  font-weight: 600;
+}
+.topbar nav a.active {
+  color: var(--text);
+}
+.nav-cta {
+  color: #fff !important;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 8px 0 20px;
+}
+h2 {
+  font-size: 18px;
+  margin: 0 0 14px;
+}
+
+.muted {
+  color: var(--muted);
+}
+.small {
+  font-size: 13px;
+}
+.right {
+  text-align: right;
+}
+.error {
+  color: var(--danger);
+  font-size: 14px;
+}
+.green {
+  color: var(--green);
+}
+.amber {
+  color: var(--amber);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.stat {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.stat-label {
+  color: var(--muted);
+  font-size: 13px;
+}
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+td {
+  padding: 11px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.badge.draft {
+  background: #2a3346;
+  color: var(--muted);
+}
+.badge.sent {
+  background: rgba(91, 140, 255, 0.16);
+  color: var(--primary);
+}
+.badge.paid {
+  background: rgba(52, 211, 153, 0.16);
+  color: var(--green);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 9px 16px;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background: var(--primary-d);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  font-weight: 600;
+}
+.btn-ghost:hover {
+  background: var(--panel-2);
+}
+.btn-ghost.danger,
+.danger {
+  color: var(--danger);
+  border-color: transparent;
+}
+
+.form,
+form .card label {
+  display: block;
+}
+label {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+}
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 9px 11px;
+  font: inherit;
+}
+textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 14px;
+}
+
+.items-table input {
+  margin-top: 0;
+}
+.tax-input {
+  width: 60px;
+  display: inline-block;
+  margin: 0 6px;
+  padding: 4px 6px;
+}
+
+.totals {
+  margin-top: 18px;
+  margin-left: auto;
+  width: 280px;
+}
+.totals > div,
+.invoice-totals > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+}
+.totals .grand,
+.invoice-totals .grand {
+  border-top: 1px solid var(--border);
+  margin-top: 6px;
+  padding-top: 12px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.spacer {
+  flex: 1;
+}
+
+/* Invoice sheet — printable */
+.invoice-sheet {
+  background: #fff;
+  color: #1a2233;
+  border-radius: 12px;
+  padding: 44px;
+}
+.invoice-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+.invoice-title {
+  font-size: 34px;
+  letter-spacing: 0.1em;
+  margin: 0;
+  color: #1a2233;
+}
+.invoice-sheet .muted {
+  color: #6b7689;
+}
+.invoice-sheet .brand-block {
+  color: #1a2233;
+}
+.invoice-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.invoice-meta h4 {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #6b7689;
+  margin: 0 0 6px;
+}
+.invoice-items th {
+  color: #6b7689;
+  border-bottom: 2px solid #e4e8ef;
+}
+.invoice-items td {
+  border-bottom: 1px solid #eef1f5;
+  color: #1a2233;
+}
+.invoice-totals {
+  margin-left: auto;
+  width: 280px;
+  margin-top: 18px;
+}
+.invoice-notes {
+  margin-top: 28px;
+  border-top: 1px solid #eef1f5;
+  padding-top: 16px;
+}
+.invoice-notes h4 {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #6b7689;
+  margin: 0 0 6px;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .app {
+    max-width: none;
+    padding: 0;
+  }
+  .invoice-sheet {
+    padding: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .stats,
+  .grid-2,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
